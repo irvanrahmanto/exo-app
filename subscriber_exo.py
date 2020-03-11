@@ -8,10 +8,12 @@ import time
 
 
 def on_message(client, userdata, message):
+    # print(client)
+    print(dir(client))
     with open("myidol.jpg", "wb") as f:
         f.write(message.payload)
         f.close()
-        print("Downloaded")
+        print("Success downloaded!")
 
 
 # mendefinisikan broker address yang akan digunakan
